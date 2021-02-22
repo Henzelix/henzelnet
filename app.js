@@ -13,6 +13,11 @@ app.get('/', (req, res) => {
       title: "Test",
       description: "bloga",
       name: "Mikolaj"
+    },
+    {
+      title: "blog2",
+      description: "chyba dziala",
+      name: "henzel"
     }
   ];
   res.render('index', { blogs });

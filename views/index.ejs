@@ -22,6 +22,12 @@
         form{
             text-align: center;
         }
+        .blog-container{
+            display: flex;
+            justify-content: center;
+            background-color: rebeccapurple;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -40,17 +46,19 @@
         </form>
     </div>
     <main>
-        <div>
-            <h1>
-                <%= blogs[0].title %> 
-            </h1>
-            <h2>
-                <%= blogs[0].name %> 
-            </h2>
-            <h4>
-                <%= blogs[0].description %> 
-            </h4>
-        </div>
+        <% blogs.forEach(blogs => { %>
+            <div class="blog-container">
+                <h1>
+                    <%= blogs.title %> 
+                </h1>
+                <h2>
+                    <%= blogs.name %> 
+                </h2>
+                <h4>
+                    <%= blogs.description %> 
+                </h4>
+            </div><br><br>
+        <% }) %> 
     </main>
 </body>
 </html>
