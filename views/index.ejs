@@ -7,7 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: "Showcard Gothic";
+            src: url("/Showcard.ttf") format('truetype');
+        }
         body{
+            margin: 0 !important;
             background-image: url('/beanstalk.png');
             font-family: 'Varela Round', sans-serif;
         }
@@ -17,16 +22,45 @@
         }
         header{
             font-family: "Showcard Gothic";
+            font-size: 25;
             text-align: center;
+        }
+        header h1{
+            color: #fff;
+            padding: 20;
+            background-color: #3cde51;
         }
         form{
             text-align: center;
         }
-        .blog-container{
+        main{
             display: flex;
-            justify-content: center;
-            background-color: rebeccapurple;
+            align-items: center;
             flex-direction: column;
+        }
+        .blog-container{
+            background-color: white;
+            width: 90vw;
+            max-width: 1400px;
+            border-radius: 35px;
+            -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.3); 
+            box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.3);
+        }
+        .blogTitle{
+            margin-left: 3vw;
+            font-size: 40;
+        }
+        .blogName{
+            margin-right: 3vw;
+            color: #b8b8b8;
+        }
+        .blogDesc{
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+        .firstRow{
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -41,20 +75,22 @@
             <label for="title">Tytuł:</label><br>
             <input type="text" id="title" name="title"><br><br>
             <label for="desc">Opis:</label><br>
-            <textarea name="desc" id="desc" maxlength="250"></textarea><br><br><br>
+            <textarea name="desc" id="desc" maxlength="500"></textarea><br><br><br>
             <button>Wyślij</button>
         </form>
     </div>
     <main>
         <% blogs.forEach(blogs => { %>
             <div class="blog-container">
-                <h1>
-                    <%= blogs.title %> 
-                </h1>
-                <h2>
-                    <%= blogs.name %> 
-                </h2>
-                <h4>
+                <div class="firstRow">
+                    <h1 class="blogTitle">
+                        <%= blogs.title %> 
+                    </h1>
+                    <h3 class="blogName">
+                        <%= blogs.name %> 
+                    </h3>
+                </div>
+                <h4 class="blogDesc">
                     <%= blogs.description %> 
                 </h4>
             </div><br><br>
