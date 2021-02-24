@@ -68,10 +68,14 @@ input, textarea{
 textarea{
     height: 170px;
     padding-top: 10px;
+    resize: none;
 }
 label{
     font-size: 25;
     font-weight: bold;
+}
+input:focus, textarea:focus, button:focus{
+    outline: none;
 }
 button{
     background-color: #ff2e2e;
