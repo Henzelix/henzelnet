@@ -19,18 +19,6 @@ mongoose.connect('mongodb+srv://user:password1234@henzelnet.zm5jf.mongodb.net/he
 );
 
 app.get('/', (req, res) => {
-  // const blogs = [
-  //   {
-  //     title: "Test",
-  //     description: "bloga",
-  //     name: "Mikolaj"
-  //   },
-  //   {
-  //     title: "blog2",
-  //     description: "bloga",
-  //     name: "henzel"
-  //   }
-  // ];
   Blog.find().sort('-createdAt').then((blogs) => {
     //console.log(blogs);
     res.render('index', { blogs });
