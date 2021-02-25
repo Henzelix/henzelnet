@@ -2,10 +2,21 @@
     font-family: "Showcard Gothic";
     src: url("/Showcard.ttf") format('truetype');
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0 !important;
     background-image: url('/beanstalk.png');
     font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.down{
+    margin-top: -5px;
 }
 #container{
     display: flex;
@@ -29,7 +40,11 @@ main{
     align-items: center;
     flex-direction: column;
 }
-.blog-container{
+.header-title{
+    font-size: 45px;
+    padding: 20px;
+}
+#blog-container{
     background-color: white;
     width: 90vw;
     max-width: 1400px;
@@ -49,6 +64,7 @@ main{
     margin-left: 3vw;
     margin-right: 3vw;
     margin-top: -5px;
+    text-align: left;
 }
 .firstRow{
     display: flex;

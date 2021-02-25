@@ -12,6 +12,7 @@
     <header>
         <h1>HENZELNET</h1>
     </header>
+    <h1 class="header-title">Napisz, co tylko chcesz</h1>
     <div id="container">
         <form action="/" method="POST">
             <label for="name">Imię:</label><br>
@@ -23,9 +24,10 @@
             <button>Wyślij</button><br><br>
         </form>
     </div>
+    <h1 class="down"><a href="#blog-container">\/</a></h1>
     <main>
         <% blogs.forEach(blogs => { %>
-            <div class="blog-container">
+            <div id="blog-container">
                 <div class="firstRow">
                     <h1 class="blogTitle">
                         <%= blogs.title %> 
