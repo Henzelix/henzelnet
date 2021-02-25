@@ -20,7 +20,6 @@ mongoose.connect('mongodb+srv://user:password1234@henzelnet.zm5jf.mongodb.net/he
 
 app.get('/', (req, res) => {
   Blog.find().sort('-createdAt').then((blogs) => {
-    //console.log(blogs);
     res.render('index', { blogs });
   }).catch((error) => {
     console.log(error);
