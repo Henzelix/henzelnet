@@ -72,7 +72,7 @@ main{
 }
 input, textarea{
     border: 5px black solid;
-    width: 55vw;
+    width: 90vw;
     height: 60px;
     border-radius: 25px;
     font-size: 15px;

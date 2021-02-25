@@ -37,5 +37,5 @@ app.post('/', (request, response) => {
 });
 
 app.use((request, response) => {
-  response.status(404).render('404');
+  response.redirect('/');
 });
