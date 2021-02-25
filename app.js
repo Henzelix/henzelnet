@@ -15,7 +15,7 @@ mongoose.connect('mongodb+srv://user:password1234@henzelnet.zm5jf.mongodb.net/he
   useFindAndModify: false,
   useCreateIndex: true
 }).then(
-  app.listen(3000)
+  app.listen(process.env.PORT || 3000)
 );
 
 app.get('/', (req, res) => {
@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
   //   }
   // ];
   Blog.find().sort('-createdAt').then((blogs) => {
-    console.log(blogs);
+    //console.log(blogs);
     res.render('index', { blogs });
   }).catch((error) => {
     console.log(error);
